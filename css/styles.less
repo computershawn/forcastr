@@ -1,0 +1,248 @@
+body {
+    background-color: #EDF9FF;
+}
+
+.navbar-default {
+    background-color: rgb(255,130,5);
+    .navbar-brand {
+        color:#ffffff;
+        font-family: 'Josefin Slab', sans-serif;
+        font-size: 22px;
+    }
+    .navbar-brand i {
+        font-size: 18px;
+    }
+}
+
+@-webkit-keyframes sunglow {
+  0%     { color:#ffef29; }
+  50%    { color:#ffffff; }
+  100%   { color:#ffef29; }
+}
+@-moz-keyframes sunglow {
+  0%     { color:#ffef29; }
+  50%    { color:#ffffff; }
+  100%   { color:#ffef29; }
+}
+@-o-keyframes sunglow {
+  0%     { color:#ffef29; }
+  50%    { color:#ffffff; }
+  100%   { color:#ffef29; }
+}
+@keyframes sunglow {
+  0%     { color:#ffef29; }
+  50%    { color:#ffffff; }
+  100%   { color:#ffef29; }
+}
+
+.sun-icon {
+  -webkit-animation: sunglow 4s infinite; /* Safari 4+ */
+  -moz-animation:    sunglow 4s infinite; /* Fx 5+ */
+  -o-animation:      sunglow 4s infinite; /* Opera 12+ */
+  animation:         sunglow 4s infinite; /* IE 10+, Fx 29+ */
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+
+.sqr-btn {
+    font-size: 11px;
+    width: 72px;
+    height: 72px;
+    border-radius: 0;
+    padding: 0;
+}
+
+.sqr-btn.disabled {
+    opacity: 1;
+}
+
+.btn-group>.btn {
+    background-color: #fbfbfb;
+}
+
+.btn-group>.btn:first-child {
+    color: #fff;
+    background-color: #00cdfb;
+}
+
+//[id^=sj-arrow] {
+//
+//#sj-arrow1 {
+//  transform: scale(.5);
+//}
+
+//[id^=sj-arrow] {
+//  transform: scale(.5);
+//}
+
+//.sj-arrow {
+//  width: 100px;
+//  height: 100px;
+//  transform-origin: 50% 50%;
+//}
+
+.sj-cloud {
+    transform: translate(0,6px) scale(0.6);
+}
+
+
+.tempr, .wind-spd, .press, .humid {
+    font-size: 24px;
+}
+
+.tempr, .wind-spd, .press, .humid {
+    font-weight: bolder;
+}
+
+//.item-label {
+//    position: absolute;
+//    width: 100%;
+//    top: 4px;
+//    left: 0;
+//    text-transform: uppercase;
+//    font-size: 10px;
+//    font-weight: bolder;
+//}
+.item-label {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.item-label, .units {
+    text-align: center;
+}
+
+.wind-units, .temp-label, .press-units, .humid-units {
+    width: 100%;
+    bottom: 2px;
+    left: 0;
+}
+
+.temp-units {
+    font-size: 12px;
+    font-weight: initial;
+}
+
+.sqr-block, .hdr-block {
+    width: 72px;
+    height: 72px;
+    background-color: #fcfcfc;
+    box-sizing: border-box;
+    padding: 0;    
+    font-size: 11px;
+
+//    border-top: 1px solid #ccc;
+//    border-right: 1px solid #ccc;
+//    border-bottom: 1px solid #ccc;
+//    border-left: 1px solid #ccc;    
+    
+    /* Flex That Stuff */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    flex-flow: column;
+}
+
+.hdr-block {
+    height: 36px;
+}
+
+.hdr-cont {
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.sqr-block {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.row:nth-child(2) .sqr-block {
+    border-top: 4px solid rgba(0,0,0,.2);
+    box-sizing: content-box;
+}
+
+.clr-rt-border {
+    border-right: none;
+}
+
+.clr-lt-border {
+    border-left: none;
+}
+
+.sqr-block:not(:first-child), .hdr-block:not(:first-child) {
+    margin: 0 0 0 -1px;
+}
+
+.date-block {
+    color: #fff;
+    background-color: #00cdfb;
+}
+
+.weekday {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.weather-col {
+    padding: 0;
+}
+
+
+
+
+
+
+.icon-col, .icon-row, .weather-container {
+    display: flex;
+}
+
+.icon-row {
+    flex-flow: row nowrap;
+}
+
+@media screen and (max-width: 360px) {
+    .sqr-block {
+        width: 90px;
+        height: 90px;
+        font-size: 15px;
+    }
+
+    .tempr, .wind-spd, .press, .humid {
+        font-size: 36px;
+    }
+    
+    .temp-units {
+        font-size: 18px;
+    }
+    
+    .icon-row {
+        flex-flow: column wrap;
+        margin-bottom: 4px;
+    }
+    
+    .row:nth-child(2) .sqr-block {
+        border-top: none;
+    }
+
+    .icon-col:first-child {
+        .sqr-block {
+            border-bottom: none;
+        }
+    }
+    
+    .hdr-cont {
+        display: none;
+    }
+}
+
+.weather-container {
+    justify-content: center;
+    -webkit-justify-content: center;
+}

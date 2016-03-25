@@ -1,0 +1,68 @@
+<div class="weather-container">
+    <div class="icon-row">
+
+        
+        <div class="icon-col">
+<!--            Date-->
+            <div class="sqr-block date-block">
+                <span class="weekday">{{ convertToDate( { dt: weatherDay.dt }) | date: dayWeekFormat }}</span><span class="date-text">{{ convertToDate( { dt: weatherDay.dt }) | date: dayMonthFormat }}</span>
+            </div>
+
+<!--            Temp High-->
+            <div class="sqr-block clr-rt-border">
+              <span class="tempr">{{ convertToStd( { daytimeTemp: weatherDay.temp.max }) }}<sup class="units temp-units">&deg;F</sup></span>
+              <span class="units temp-label">High</span>        
+            </div>
+
+<!--            Temp Low-->
+            <div class="sqr-block clr-lt-border">
+              <span class="tempr">{{ convertToStd( { daytimeTemp: weatherDay.temp.min }) }}<sup class="units temp-units">&deg;F</sup></span>
+              <span class="units temp-label">Low</span>
+            </div>
+            
+<!--            Humidity-->
+            <div class="sqr-block">
+              <span class="humid">{{ weatherDay.humidity }}</span>
+              <span class="units humid-units">%</span>
+            </div>
+
+        </div>
+
+        
+        <div class="icon-col">    
+<!--            Wind Speed-->
+            <div class="sqr-block clr-rt-border">
+              <span class="wind-spd">{{ convertWindSpeed( { windSpeed: weatherDay.speed }) }}</span>
+              <span class="units wind-units">mph</span>
+            </div>
+
+<!--            Wind Direction-->
+            <div class="sqr-block clr-lt-border">
+                <svg viewBox="0 0 100 100" width="72" height="72" ng-style="{'transform':'scale(.5) rotate(' + '{{ weatherDay.deg }}' + 'deg)'}">
+                  <use xlink:href="symbols.svg#arrow"/>
+                </svg>
+            </div>
+
+<!--            Clouds-->
+            <div id="cloud-status-{{ $parent.$index + 100 }}" class="sqr-block">
+                <svg class="sj-cloud" viewBox="0 0 100 100" width="72" height="72">
+                    <g>
+                      <circle cx="50" cy="50" r="48" fill="#00cdfb" stroke="none" />
+                      <circle cx="50" cy="50" r="24" fill="none" stroke="#fff" ng:attr:stroke-width="{{weatherDay.clouds*32/100}}" />
+                      <line x1="24" y1="40" x2="76" y2="40" stroke="#fff" stroke-weight="2" />
+                      <line x1="20" y1="50" x2="80" y2="50" stroke="#fff" stroke-weight="4" />
+                      <line x1="24" y1="60" x2="76" y2="60" stroke="#fff" stroke-weight="2" />
+                    </g>
+                </svg>
+            </div>
+
+<!--            Precipitation-->
+            <div class="sqr-block">
+              <span class="wind-spd">{{ weatherDay.rain ? weatherDay.rain : "0" }}</span>
+              <span class="units wind-units">mm</span>
+            </div>
+            
+        </div>
+    </div>
+</div>
+

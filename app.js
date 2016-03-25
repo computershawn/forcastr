@@ -1,0 +1,8 @@
+/*
+    !!! AT SOME POINT YOU SHOULD GET YOUR OWN API KEY FOR
+    OPENWEATHERMAP. THE ONE WE'RE USING FOR THIS DEMO APP
+    IS FROM THE API USAGE EXAMPLES ON OPENWEATHERMAP.ORG
+*/
+
+// MODULE
+var weatherApp = angular.module('forcastrApp', ['ngRoute', 'ngResource']);

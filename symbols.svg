@@ -1,0 +1,10 @@
+<!-- / DEFINE OUR SVG ARROW SYMBOL
+       We'll be using this symbol to indicate the direction of the wind / -->
+<svg class="defs-only" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="arrow" >
+      <line x1="50" y1="22" x2="50" y2="80" style="stroke:#000;stroke-width:3" />
+      <line x1="44" y1="44" x2="56" y2="56" style="stroke:#000;stroke-width:2" />
+      <path d="M45 16 L50 0 L55 16 L50 14 Z" style="fill:#000; stroke:none" />
+      <path d="M45 100 L45 90 L50 85 L55 90 L55 100 L50 95 Z" style="fill:#000; stroke:none" />
+    </symbol>
+</svg>        
